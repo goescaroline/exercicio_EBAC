@@ -1,0 +1,49 @@
+const alunos = [ 
+{
+    nome: 'José Henrique',
+    nota: 3.5
+},
+{
+    nome: 'Flávia Regina',
+    nota: 5.5
+},
+{
+    nome: 'Laura Manoela',
+    nota: 8.5
+},
+{
+    nome: 'Sandra Paula',
+    nota: 4.5
+},
+{
+    nome: 'Roberto Souza',
+    nota: 9.5
+},
+{
+    nome: 'Paulo Augusto',
+    nota: 6.5
+},
+{
+    nome: 'Ana Flávia',
+    nota: 6.5
+},
+{
+    nome: 'Teresa Cristina',
+    nota: 8
+},
+{
+    nome: 'Carlos Roberto',
+    nota: 9
+},
+{
+    nome: 'Maria Helena',
+    nota: 5
+},
+]
+
+const alunosAprovados = alunos.filter(function(item) {
+    for (let i = 0; i < alunos.length; i++) {
+        return item.nota >= 6;
+    }
+})
+console.log(alunosAprovados)
