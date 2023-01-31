@@ -1,35 +1,37 @@
-function Pessoa(nome) {
+function Pokemon(nome) {
     this.nome = nome;
-    this.dizOi = function() {
-        console.log(this.nome + " diz ola");
+    this.dizNome = function() {
+        console.log("Eu sou o " + this.nome);
     }
 }
-function Funcionario(nome, cargo, salario) {
-    this.cargo = cargo;
-    this.salario = salario;
 
-    this.dizCargo = function() {
-        console.log(this.cargo);
+function Pikachu(nome, tipo, hp) {
+    this.tipo = tipo;
+    this.hp = hp;
+
+    this.Ataque = function() {
+        console.log(this.nome + " usou choque do trovão");
     }
 
-    this.dizSalario = function() {
-        console.log(this.salario);
-    }
-
-    Pessoa.call(this, nome);
+    Pokemon.call(this, nome);
 }
 
+function Charizard(nome, tipo, hp) {
+    this.tipo = tipo;
+    this.hp = hp;
 
-const funcionario1 = new Funcionario("Maria","dev front-end", "5000", "sao paulo", "sao paulo", "brasil");
-const funcionario2 = new Funcionario("Joao","dev back-end", "5000", "rio de janeiro", "rio de janeiro", "brasil");
-const funcionario3 = new Funcionario("Jose","full stack", "7000", "nova iorque", "washington DC","estados unidos");
+    this.dizHp = function() {
+        console.log('Meu Hp é de:' + this.hp);
+    }
+    Pokemon.call(this, nome);
+}
 
-funcionario1.dizOi();
-funcionario1.dizCargo();
-funcionario1.dizSalario();
-funcionario2.dizOi();
-funcionario2.dizCargo();
-funcionario2.dizSalario();
-funcionario3.dizOi();
-funcionario3.dizCargo();
-funcionario3.dizSalario();
+const pikachuDoAsh = new Pikachu("Pikachu", "Elétrico","3");
+const charizardDoGary = new Charizard("Charizard", "Fogo", "5");
+const togepy = new Pokemon("Togepy");
+
+pikachuDoAsh.dizNome();
+togepy.dizNome();
+charizardDoGary.dizNome();
+pikachuDoAsh.Ataque();
+charizardDoGary.dizHp();
